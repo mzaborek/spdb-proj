@@ -11,3 +11,12 @@ SELECT
     SubStr(blkid, 1, 11) AS tractid
 FROM nyc_census_blocks
 GROUP BY tractid, boroname;
+
+CREATE INDEX nyc_census_tracts_gidx
+    ON nyc_census_tracts USING GIST(geom);
+
+CREATE INDEX nyc_streets_gidx
+    ON nyc_streets USING GIST(geom);
+
+ CREATE INDEX nyc_census_tracts_idx
+    ON nyc_census_tracts(tractid);
