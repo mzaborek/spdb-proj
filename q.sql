@@ -20,3 +20,5 @@ CREATE INDEX nyc_streets_gidx
 
  CREATE INDEX nyc_census_tracts_idx
     ON nyc_census_tracts(tractid);
+
+--średnia liczba zabójstw na hektar: 5.074072137264594
